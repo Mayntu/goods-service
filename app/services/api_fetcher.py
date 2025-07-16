@@ -1,12 +1,13 @@
-import threading
-import time
-import requests
-import logging
 from sqlalchemy import Engine
 from sqlalchemy.orm import Session
+
 from app.database.models import Base, Product, Category
 from app.config import Config
 from app.services.logger import setup_logger
+
+import time
+import requests
+import logging
 
 setup_logger()
 logger: logging.Logger = logging.getLogger(__name__)

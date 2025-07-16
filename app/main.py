@@ -1,10 +1,12 @@
 from flask import Flask
 from sqlalchemy import create_engine, Engine
+
 from app.config import Config
 from app.database.models import Base
 from app.services.api_fetcher import fetch_and_update_db
 from app.services.logger import setup_logger
 from app.controllers.info_controller import register_routes
+
 import threading
 import logging
 
